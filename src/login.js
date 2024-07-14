@@ -14,7 +14,7 @@ function Login({ navigation }) {
         console.log(text2);
         console.log(' - - - ');
 
-        await Axios.post('https://learn-it-app', {
+        await Axios.post('https://my-a.up.railway.app/', {
             phone: text,
             password: text2
         }).then((response) => {
