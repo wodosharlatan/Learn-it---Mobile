@@ -9,12 +9,12 @@ function Login({ navigation }) {
     const [text2, onChangeText2] = React.useState('');
 
 
-    const HandleLogin = () => {
+    const HandleLogin = async() => {
         console.log(text);
         console.log(text2);
         console.log(' - - - ');
 
-        Axios.post('https://learn-it-app', {
+        await Axios.post('https://learn-it-app', {
             phone: text,
             password: text2
         }).then((response) => {
