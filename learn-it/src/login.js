@@ -1,12 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View,  TextInput, SafeAreaView, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, SafeAreaView, Button } from 'react-native';
 
 
 function Login({ navigation }) {
 
-    const [text, onChangeText] = React.useState('Some text');
+    const [text, onChangeText] = React.useState('');
+    const [text2, onChangeText2] = React.useState('');
 
 
+    const HandleLogin = () => {
+        console.log(text);
+        console.log(text2);
+        console.log(' - - - ');
+    }
 
     return (
         <>
@@ -15,8 +21,21 @@ function Login({ navigation }) {
                     style={styles.input}
                     onChangeText={onChangeText}
                     value={text}
-                    placeholder="Placeholder"
+                    placeholder="Telefonni cislo"
                 />
+
+                <TextInput
+                    style={styles.input}
+                    onChangeText={onChangeText2}
+                    value={text2}
+                    placeholder="Heslo"
+                />
+
+                <Button
+                    title="Login"
+                    onPress={() => HandleLogin()}
+                />
+
             </SafeAreaView>
 
             <View style={styles.container}>

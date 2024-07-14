@@ -12,6 +12,17 @@ function Register({ navigation }) {
     const [text6, onChangeText6] = React.useState('');
     const [text7, onChangeText7] = React.useState('');
 
+    const HandlePress = () => {
+        console.log(text);
+        console.log(text2);
+        console.log(text3);
+        console.log(text4);
+        console.log(text5);
+        console.log(text6);
+        console.log(text7);
+        console.log(' - - - ');
+    }
+
     return (
         <>
             <SafeAreaView>
@@ -74,7 +85,7 @@ function Register({ navigation }) {
 
                 <Button
                     title="Registrovat"
-                    onPress={() => console.log('Registrace')}
+                    onPress={() => HandlePress()}
                 />
 
             </SafeAreaView>
