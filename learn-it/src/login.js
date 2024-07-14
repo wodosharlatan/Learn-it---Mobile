@@ -1,4 +1,5 @@
 import React from 'react';
+import Axios from 'axios';
 import { StyleSheet, Text, View, TextInput, SafeAreaView, Button } from 'react-native';
 
 
@@ -12,6 +13,13 @@ function Login({ navigation }) {
         console.log(text);
         console.log(text2);
         console.log(' - - - ');
+
+        Axios.post('https://learn-it-app', {
+            phone: text,
+            password: text2
+        }).then((response) => {
+            console.log(response.data);
+        });
     }
 
     return (
