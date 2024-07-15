@@ -20,11 +20,11 @@ function Register({ navigation }) {
 
 
         axios.post("http://0.0.0.0:3000/users/register", {
-            text: text,
-            text2: text2,
-            text3: text3,
-            text4: text4,
-            text5: text5,
+            name: text,
+            class: text2,
+            parentNumber: text3,
+            parentNumber2: text4,
+            personalNumber: text5,
             text6: text6,
             text7: text7,
             isSelected: isSelected,
@@ -58,6 +58,8 @@ function Register({ navigation }) {
                     placeholder="Trida"
                 />
 
+                
+                <Text style={styles2.label}>Format 123 456 789</Text>
                 <TextInput
                     style={styles.input}
                     onChangeText={onChangeText3}
